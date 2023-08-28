@@ -5,10 +5,15 @@ body {
   font-size: 0.925rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logoImage {
   height: 14vh;
   width: 14vh;
 }
+
 .navbar,
 .navbar > .container {
   width: 100%;
@@ -16,7 +21,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #050301; */
   @media (max-width: 768px) {
     display: block;
   }
@@ -36,6 +40,7 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
   @media (min-width: 576px) {
     max-width: 540px;
   }
@@ -141,8 +146,23 @@ span:not(:last-child) {
   }
 }
 
-.link {
+span > a {
   /* text-decoration: none; */
   font-weight: 500;
   color: #3c4250;
+}
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+    text-align: center;
+  }
+
+  &.active {
+    display: flex !important;
+  }
 }
