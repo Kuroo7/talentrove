@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.925rem;
+}
+
+.logoImage {
+  height: 14vh;
+  width: 14vh;
+}
+.navbar,
+.navbar > .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #050301; */
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #eceef3;
+}
+
+.container {
+  width: 1170px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.navbar-toggler {
+  /* border-radius: 5px;
+  background-color: transparent; */
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+span {
+  height: 2px;
+  width: 22px;
+  background-color: lighten(#3c4250, 35%);
+  display: block;
+}
+span:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+
+/* .NavLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+} */
+
+.NavLinks {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+    text-align: center;
+  }
+}
+&.active {
+  display: flex !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+  }
+}
+.navbar-nav > li > a {
+  color: #3c4250;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  &:hover {
+    color: #66f;
+  }
+  @media (max-width: 768px) {
+    border-bottom: 1px solid #eceef3;
+  }
+  &.active {
+    a {
+      color: #66f;
+    }
+  }
+}
+
+.link {
+  /* text-decoration: none; */
+  font-weight: 500;
+  color: #3c4250;
+}
